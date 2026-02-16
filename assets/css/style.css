@@ -173,28 +173,18 @@ header nav ul li .nav-link.active::after {
     background-color: #000;
 }
 
-.home #line {
-    width: 1px;
-    height: 300px;
-    margin-right: -150px;
-    background-color: #000;
-}
-
 .home .hero-img {
-    max-width: 100%;
-    height: 345px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    box-shadow: 10px 10px 5px #121212;
-    overflow: hidden;
-    margin-left: 100px;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.home .hero-img img{
-    width: 415px;
-    height: auto;
-    margin-top: -100px;
-    margin-right: -70px;
+.home .hero-img img {
+    width: 384px;
+    height: 384px;
+    border-radius: 50%;
+    box-shadow: 8px 8px 8px #000;
 }
 
 /* About Me Style*/
@@ -210,12 +200,12 @@ header nav ul li .nav-link.active::after {
     justify-content: space-evenly;
     align-items: center;
     width: 350px;
-    height: 100vh;
+    min-height: 100%;
+    padding-top: 70px;
 }
 
 .aboutme .sidebar img {
     margin-top: 50px;
-    margin-bottom: -50px;
     max-width: 100%;
     height: 200px;
     border: 1px solid #000;
@@ -226,7 +216,8 @@ header nav ul li .nav-link.active::after {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 55%;
+    min-height: 100%;
+    margin-top: 10px;
 }
 
 .aboutme .sidebar .skills .personal-info p{
@@ -241,8 +232,10 @@ header nav ul li .nav-link.active::after {
     margin-bottom: 10px;
 }
 
-.aboutme .sidebar .interest {
-    margin-top: -40px;
+.aboutme .sidebar .skills .personal-info,
+.aboutme .sidebar .skills .softSkills,
+.aboutme .sidebar .skills .interest {
+    margin-bottom: 10px;
 }
 
 .aboutme .sidebar div ul {
@@ -691,4 +684,90 @@ header nav ul li .nav-link.active::after {
     margin-left: 5px;
 }
 
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+
+  .home,
+  .aboutme,
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutme .sidebar {
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .aboutme .descriptions {
+    height: auto;
+    width: 100%;
+  }
+
+  .aboutme .descriptions .para {
+    width: 100%;
+    height: auto;
+  }
+
+  .experience .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "box-1"
+      "box-3"
+      "box-4"
+      "box-2";
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 10px;
+  }
+
+  header nav {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  header nav ul {
+    gap: 15px;
+  }
+
+  .home {
+    text-align: center;
+  }
+
+  .home .hero .socials {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .home .hero-img {
+    width: 250px;
+    height: 250px;
+    margin: 30px 0;
+  }
+
+  .aboutme .descriptions .languages .techs {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .contact-left,
+  .contact .contact-right {
+    width: 100%;
+  }
+
+}
 
