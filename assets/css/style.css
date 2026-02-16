@@ -1,20 +1,23 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scrollbar-width: none;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  font-family: "Delius", cursive;
+  line-height: 1.6;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 
 header {
     position: fixed;
@@ -59,33 +62,34 @@ header nav ul li .nav-link {
   position: relative;
   text-decoration: none;
   color: black;
-  padding: 8px 12px;
-  transition: 0.3s ease;
 }
 
 header nav ul li .nav-link::after {
   content: "";
-  position: absolute;
+  position: relative;
+  display: inline-block;
   left: 0;
-  bottom: -4px;
-  width: 0%;
+  bottom: 15px;
+  width: 100%;
   height: 2px;
   background: black;
-  transition: width 0.3s ease;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
+header nav ul li .nav-link:hover::after,
 header nav ul li .nav-link.active::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
-main {
-    height: 100vh;
-    font-family: "Delius", cursive;
-}
 
 /* ALL */
 .home, .aboutme, .experience, .contact {
     margin: 0px 50px 0 50px;
+    min-height: 100vh;
+    height: auto;
 }
 
 /* Home/Hero Style*/
@@ -93,12 +97,11 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
 }
 
 .home .hero {
     height: 200px;
-    width: auto;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -178,9 +181,9 @@ main {
 }
 
 .home .hero-img {
-    width: auto;
+    max-width: 100%;
     height: 345px;
-    border: 1px solid fff;
+    border: 1px solid #fff;
     border-radius: 50%;
     box-shadow: 10px 10px 5px #121212;
     overflow: hidden;
@@ -199,7 +202,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    height: 100vh;
 }
 
 .aboutme .sidebar {
@@ -214,7 +216,7 @@ main {
 .aboutme .sidebar img {
     margin-top: 50px;
     margin-bottom: -50px;
-    width: 200px;
+    max-width: 100%;
     height: 200px;
     border: 1px solid #000;
     border-radius: 100px;
@@ -256,7 +258,7 @@ main {
 }
 
 .aboutme .descriptions {
-    width: auto;
+    max-width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -315,7 +317,7 @@ main {
 .aboutme .descriptions .certificates li .cert-icons {
     display: flex;
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -422,7 +424,7 @@ main {
 .aboutme .descriptions #middle {
     margin-left: 20px;
     font-size: 18px;
-    width: 1000px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     color: #fff;
@@ -463,7 +465,6 @@ main {
 }*/
 
 .experience {
-    height: 100vh;
     padding-top: 70px;
 }
 
@@ -475,7 +476,7 @@ main {
 .experience .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 200px 150px;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
     "box-1 box-1 box-4"
     "box-3 box-3 box-4"
@@ -511,8 +512,9 @@ main {
 }
 
 .experience .grid-container .item .details #detail-content {
-    width: 650px;
+    max-width: 100%;
     font-style: italic;
+    margin-right: 20px;
 }
 
 .experience .grid-container .item .cert-icons {
@@ -556,17 +558,15 @@ main {
 
 /* Contact Style*/
 .contact {
-    height: 100vh;
-    padding-top: 70px;
+    padding-top: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 0;
 }
 
 .contact .contact-content {
     height: 75%;
-    width: auto;
+    max-width: 100%;
 }
 
 .contact .contact-left {
@@ -600,7 +600,7 @@ main {
 
 .contact .contact-left form .hundredPx {
     height: auto;
-    width: auto;;
+    max-width: 100%;
 }
 
 .contact .contact-left form .fifty-px, 
@@ -621,7 +621,7 @@ main {
 
 .contact .contact-left form div textarea {
     resize: none;
-    width: auto;
+    max-width: 100%;
     min-height: 200px;
     margin-top: 5px;
     padding: 5px 8px;
@@ -663,8 +663,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
-    width: 30%;
+    max-height: auto;
+    max-width: 100%;
 }
 
 .contact .contact-right nav ul {
@@ -673,6 +673,7 @@ main {
     justify-content: space-evenly;
     align-items: end;
     padding-left: 50px;
+    max-width: 100%;
 }
 
 .contact .contact-right nav ul li {
