@@ -422,40 +422,10 @@ header nav ul li .nav-link.active::after {
     padding: 5px 8px;
     border-radius: 8px;
 }
-/* Experience Style
+
+/* Experience */
 .experience {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
-
-.experience h2 {
-    padding-top: 80px;
-}
-
-.experience .organization {
-    height: 200px;
-    width: 100%;
-    padding: 10px   ;
-    display: flex;
-    align-items: center;
-}
-
-.experience .organization .details p {
-    width: 350px;
-}
-
-.experience .exp-box {
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}*/
-
-.experience {
-    padding-top: 70px;
+    padding-top: 55px;
 }
 
 .experience h2 {
@@ -797,4 +767,5 @@ header nav ul li .nav-link.active::after {
     }
 
 }
+
 
