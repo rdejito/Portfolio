@@ -175,7 +175,6 @@ header nav ul li .nav-link.active::after {
 }
 
 .home .hero-img {
-    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -798,4 +797,5 @@ header nav ul li .nav-link.active::after {
     }
 
 }
+
 
