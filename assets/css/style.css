@@ -491,6 +491,7 @@ header nav ul li .nav-link.active::after {
 .experience .grid-container #oratory,
 .experience .grid-container #photography {
     justify-content: space-evenly;
+    max-height: 100%;
 }
 
 .experience .grid-container #education,
@@ -684,4 +685,5 @@ header nav ul li .nav-link.active::after {
     color: #000;
     margin-left: 5px;
 }
+
 
