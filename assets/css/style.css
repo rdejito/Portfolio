@@ -5,6 +5,7 @@
 }
 
 html {
+    scrollbar-width: none;
   scroll-behavior: smooth;
 }
 
@@ -252,7 +253,7 @@ header nav ul li .nav-link.active::after {
 
 .aboutme .descriptions {
     max-width: 100%;
-    height: 100vh;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -260,7 +261,7 @@ header nav ul li .nav-link.active::after {
 
 .aboutme .descriptions h2 {
     padding-top: 70px;
-    margin-bottom: -20px;
+    margin-bottom: 10px;
 }
 
 .aboutme .descriptions .para {
@@ -275,16 +276,11 @@ header nav ul li .nav-link.active::after {
     margin-left: 20px;
 }
 
-.aboutme .descriptions .para p {
-    margin: 0;
-}
-
-.aboutme .descriptions #details {
-    padding-left: 20px;
+.aboutme .descriptions .para #details {
+    padding-left: 30px;
 }
 
 .aboutme .descriptions .certificates {
-    margin-top: -40px;
     padding-left: 10px;
     display: flex;
     justify-content: safe;
@@ -292,7 +288,7 @@ header nav ul li .nav-link.active::after {
 
 .aboutme .descriptions .certificates li {
     width: 250px;
-    height: 150px;
+    max-height: 100%;
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -305,7 +301,7 @@ header nav ul li .nav-link.active::after {
 }
 
 .aboutme .descriptions #achv-cert {
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .aboutme .descriptions .certificates li .cert-icons {
@@ -314,6 +310,12 @@ header nav ul li .nav-link.active::after {
     max-width: 100%;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.aboutme .descriptions .certificates li .cert-icons img {
+    width: 64px;
+    height: 64px;
+    margin: 2px;
 }
 
 .aboutme .descriptions .certificates li:hover {
@@ -334,15 +336,14 @@ header nav ul li .nav-link.active::after {
 }
 
 .aboutme .descriptions #langHeader {
-    margin-top: -15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .aboutme .descriptions .languages {
     display: flex;
     flex-direction: column;
-    margin-top: -40px;
     margin-left: 20px;
+    margin-bottom: 20px;
     padding-left: 10px;
     box-shadow: 0 0 3px #000;
     border-radius: 10px;
@@ -490,7 +491,7 @@ header nav ul li .nav-link.active::after {
 
 .experience .grid-container #oratory,
 .experience .grid-container #photography {
-    justify-content: center;
+    justify-content: space-between;
     max-height: 100%;
 }
 
@@ -504,6 +505,11 @@ header nav ul li .nav-link.active::after {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}
+
+.experience .grid-container .item .details h3 {
+    font-size: 2rem;
+    margin-bottom: -3px;
 }
 
 .experience .grid-container .item .details #detail-content {
@@ -549,6 +555,7 @@ header nav ul li .nav-link.active::after {
 .experience .grid-container .item .educ-levels  p{
     padding-top: 2px;
     padding-left: 15px;
+    font-style: italic;
 }
 
 /* Contact Style*/
@@ -686,6 +693,105 @@ header nav ul li .nav-link.active::after {
     margin-left: 5px;
 }
 
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+
+    .home,
+    .aboutme,
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutme .sidebar {
+        height: auto;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .aboutme .descriptions {
+        height: auto;
+        width: 100%;
+    }
+
+    .aboutme .descriptions .para {
+        width: 100%;
+        height: auto;
+    }
+
+  .experience .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "box-1"
+        "box-3"
+        "box-4"
+        "box-2";
+  }
+
+  
+    .experience .grid-container .item .cert-icons {
+        grid-template-columns: 64px;
+        grid-template-rows: 64px;
+    }
+
+    .experience .grid-container .item .cert-icons img {
+        width: 32px;
+        height: 32px;
+    }
+}
 
 
+@media (max-width: 768px) {
+
+    header {
+        padding: 10px;
+    }
+
+    header nav {
+        width: auto;
+        margin-right: 10px;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .home .hero .socials {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home .hero-img {
+        width: 250px;
+        height: 250px;
+        margin: 30px 0;
+    }
+
+    .aboutme .descriptions .languages .techs {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .experience .grid-container .item .cert-icons img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .contact-left,
+    .contact .contact-right {
+        width: 100%;
+    }
+
+}
 
