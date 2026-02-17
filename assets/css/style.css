@@ -699,6 +699,11 @@ header nav ul li .nav-link.active::after {
         align-items: center;
     }
 
+    .home .hero-img img {
+        width: fit-content;
+        height: fit-content;
+    }
+
     .aboutme .sidebar {
         height: auto;
         width: 100%;
