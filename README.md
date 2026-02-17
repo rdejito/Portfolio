@@ -11,3 +11,5 @@ that came from an ICT background, I can say that in terms of what I know about d
 Well, enough if that :).
 Please feel free to check my portfolio and if you have some comments about it.. recommendation? suggestion?
 It would be my pleasure to have your thoughts :).
+
+Oh, and pardon me if the reponsiveness of this portfolio is downright bad, I'm in the process of fixing it.
