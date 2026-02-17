@@ -502,7 +502,7 @@ header nav ul li .nav-link.active::after {
 .experience .grid-container .item .details {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
 }
 
@@ -685,6 +685,7 @@ header nav ul li .nav-link.active::after {
     color: #000;
     margin-left: 5px;
 }
+
 
 
 
